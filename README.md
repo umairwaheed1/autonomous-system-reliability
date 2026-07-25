@@ -47,3 +47,27 @@ An enterprise-grade, fault-tolerant execution engine engineered to handle dynami
                     │                         │
                     ▼                         ▼
             [ Live Promotion ]       [ Automated Rollback & Alert ]
+
+
+
+
+
+autonomous-system-reliability/
+├── .github/workflows/        # CI pipelines and automated chaos benchmarks
+├── assets/                   # Architecture diagrams and benchmark metrics
+├── config/                   # Declarative YAML manifests for chaos and APR policies
+├── deploy/
+│   ├── docker/               # Multi-stage production Dockerfiles
+│   └── k8s/                  # Kubernetes manifests and OpenTelemetry sidecar config
+├── docs/                     # Technical specifications and system design guides
+├── src/
+│   ├── api/                  # Control plane REST API and mock microservice endpoints
+│   ├── apr/                  # Automated Program Repair (analyzer, patcher, verifier)
+│   ├── chaos/                # Fault injection orchestrators and steady-state probes
+│   ├── core/                 # Fault-tolerant execution pipeline, supervisor, and domain exceptions
+│   └── telemetry/            # OpenTelemetry metrics, tracing contexts, and structured audit loggers
+├── tests/
+│   ├── integration/          # End-to-end failover and recovery latency benchmarks
+│   └── unit/                 # Unit test suite for APR logic and chaos injectors
+├── pyproject.toml            # Modern project metadata and dependency definitions
+└── requirements.txt          # Pinned production dependency manifest
