@@ -71,3 +71,55 @@ autonomous-system-reliability/
 │   └── unit/                 # Unit test suite for APR logic and chaos injectors
 ├── pyproject.toml            # Modern project metadata and dependency definitions
 └── requirements.txt          # Pinned production dependency manifest
+
+
+
+
+
+🚀 Getting Started & Installation
+Prerequisites
+Python 3.10+
+
+Docker & Kubernetes (optional, for containerized deployments)
+
+Local Setup
+Clone the repository:
+
+Bash
+git clone [https://github.com/umairwaheed1/autonomous-system-reliability.git](https://github.com/umairwaheed1/autonomous-system-reliability.git)
+cd autonomous-system-reliability
+Create and activate a virtual environment:
+
+Bash
+python -m venv .venv
+# On Windows (PowerShell):
+.venv\Scripts\Activate.ps1
+# On Linux/macOS:
+source .venv/bin/activate
+Install dependencies in editable mode:
+
+Bash
+pip install --upgrade pip
+pip install -r requirements.txt
+pip install -e .
+🧪 Running Integration Benchmarks
+Execute the end-to-end test suite to validate the chaos injection recovery benchmarks and APR verification loops:
+
+Bash
+python -m pytest -v
+🐳 Containerization & Deployment
+Build the Production Docker Image
+Bash
+docker build -f deploy/docker/Dockerfile.runtime -t autonomous-system-reliability:latest .
+Deploy to Kubernetes
+Bash
+kubectl apply -f deploy/k8s/namespace.yaml
+kubectl apply -f deploy/k8s/deployment.yaml
+📊 Target Focus & Domains
+Software Reliability Engineering (SRE)
+
+Fault-Tolerant Distributed Systems
+
+Trusted Autonomy & Self-Healing Microservices
+
+Chaos Engineering & Runtime Verification
